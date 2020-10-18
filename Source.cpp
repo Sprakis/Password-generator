@@ -14,7 +14,7 @@ int main()
 	int key = 10;
 	while (key != 0)
 	{
-		cout << "Ââåäèòå äåéñòâèå:\n1)Îöåíêà ñòîéêîñòè;\n2)Ãåíåðàòîð ïàðîëåé;\n0)Çàâåðøåíèå ðàáîòû\nÍîìåð ôóíêöèè: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:\n1)ÐžÑ†ÐµÐ½ÐºÐ° ÑÑ‚Ð¾Ð¹ÐºÐ¾ÑÑ‚Ð¸;\n2)Ð“ÐµÐ½ÐµÑ€Ð°Ñ‚Ð¾Ñ€ Ð¿Ð°Ñ€Ð¾Ð»ÐµÐ¹;\n0)Ð—Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¸Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹\nÐÐ¾Ð¼ÐµÑ€ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸: ";
 		cin >> key;
 		if ((key == 1) || (key == 2) || (key == 0))
 		{
@@ -27,14 +27,14 @@ int main()
 				generator();
 				break;
 			case 0:
-				cout << "Äî ñâèäàíèÿ!\n";
+				cout << "Ð”Ð¾ ÑÐ²Ð¸Ð´Ð°Ð½Ð¸Ñ!\n";
 				break;
 			}
 		}
 		else
 		{
 			SetConsoleTextAttribute(console, BACKGROUND_RED | BACKGROUND_INTENSITY);
-			cout << "Íåïðàâèëüíûé íîìåð!\n\n";
+			cout << "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€!\n\n";
 			SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		}
 	}
@@ -47,23 +47,23 @@ void evaluation()
 	char P[100], V[100], T[100], snoop1[10], snoop2[10], snoop3[10], snoop4[10];
 	double S, P_d, V_d, T_d;
 	int n;
-	cout << "Ââåäèòå âåðîÿòíîñòü ïîäáîðà ïàðîëÿ\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²ÐµÑ€Ð¾ÑÑ‚Ð½Ð¾ÑÑ‚ÑŒ Ð¿Ð¾Ð´Ð±Ð¾Ñ€Ð° Ð¿Ð°Ñ€Ð¾Ð»Ñ\n";
 	SetConsoleTextAttribute(console, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-	cout << "Ïðèìåð:(10^-7)\n";
+	cout << "ÐŸÑ€Ð¸Ð¼ÐµÑ€:(10^-7)\n";
 	SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-	cout << "Ââîä: ";
+	cout << "Ð’Ð²Ð¾Ð´: ";
 	cin >> P;
-	cout << "Ââåäèòå ñêîðîñòü ïîäáîðà ïàðîëÿ\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ Ð¿Ð¾Ð´Ð±Ð¾Ñ€Ð° Ð¿Ð°Ñ€Ð¾Ð»Ñ\n";
 	SetConsoleTextAttribute(console, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-	cout << "Ïðèìåð:(15p/second, 15p/minute, 15p/hour, 15p/day, 15p/week, 15p/month, 15p/year)\n";
+	cout << "ÐŸÑ€Ð¸Ð¼ÐµÑ€:(15p/second, 15p/minute, 15p/hour, 15p/day, 15p/week, 15p/month, 15p/year)\n";
 	SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-	cout << "Ââîä: ";
+	cout << "Ð’Ð²Ð¾Ð´: ";
 	cin >> V;
-	cout << "Ââåäèòå ñðîê äåéñòâèÿ ïàðîëÿ\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ€Ð¾Ðº Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ Ð¿Ð°Ñ€Ð¾Ð»Ñ\n";
 	SetConsoleTextAttribute(console, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-	cout << "Ïðèìåð:(15/seconds, 15/minutes, 15/hours, 15/days, 15/weeks, 15/months, 15/years)\n";
+	cout << "ÐŸÑ€Ð¸Ð¼ÐµÑ€:(15/seconds, 15/minutes, 15/hours, 15/days, 15/weeks, 15/months, 15/years)\n";
 	SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-	cout << "Ââîä: ";
+	cout << "Ð’Ð²Ð¾Ð´: ";
 	cin >> T;
 	n = strlen(P);
 	bool check = 0;
@@ -179,12 +179,12 @@ void evaluation()
 		}
 		break;
 	}
-	cout << "\nÂâåäåíûå äàííûå:\nÂåðîÿòíîñòü ïîäáîðà ïàðîëÿ: " << P_d << "\nÑêîðîñòü ïåðåáîðà ïàðîëåé â ìèíóòó: " << V_d << "\nÑðîê äåéñòâèÿ ïàðîëÿ â ìèíóòàõ: " << T_d << endl;
+	cout << "\nÐ’Ð²ÐµÐ´ÐµÐ½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ:\nÐ’ÐµÑ€Ð¾ÑÑ‚Ð½Ð¾ÑÑ‚ÑŒ Ð¿Ð¾Ð´Ð±Ð¾Ñ€Ð° Ð¿Ð°Ñ€Ð¾Ð»Ñ: " << P_d << "\nÐ¡ÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ Ð¿ÐµÑ€ÐµÐ±Ð¾Ñ€Ð° Ð¿Ð°Ñ€Ð¾Ð»ÐµÐ¹ Ð² Ð¼Ð¸Ð½ÑƒÑ‚Ñƒ: " << V_d << "\nÐ¡Ñ€Ð¾Ðº Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ Ð¿Ð°Ñ€Ð¾Ð»Ñ Ð² Ð¼Ð¸Ð½ÑƒÑ‚Ð°Ñ…: " << T_d << endl;
 	S_temp = ceil(V_d * T_d / P_d);
 	SetConsoleTextAttribute(console, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-	cout << "Íèæíÿÿ ãðàíèöà ÷èñëà âîçìîæíûõ ïàðîëåé: " << S_temp << endl;
+	cout << "ÐÐ¸Ð¶Ð½ÑÑ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ð° Ñ‡Ð¸ÑÐ»Ð° Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ñ‹Ñ… Ð¿Ð°Ñ€Ð¾Ð»ÐµÐ¹: " << S_temp << endl;
 	SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-	cout << "Èçâåñòíà ëè ìîùíîñòü àëôàâèòà? Åñëè äà, óêàæèòå ìîùíîñòü, åñëè íåò, óêàæèòå 0: ";
+	cout << "Ð˜Ð·Ð²ÐµÑÑ‚Ð½Ð° Ð»Ð¸ Ð¼Ð¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ Ð°Ð»Ñ„Ð°Ð²Ð¸Ñ‚Ð°? Ð•ÑÐ»Ð¸ Ð´Ð°, ÑƒÐºÐ°Ð¶Ð¸Ñ‚Ðµ Ð¼Ð¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ, ÐµÑÐ»Ð¸ Ð½ÐµÑ‚, ÑƒÐºÐ°Ð¶Ð¸Ñ‚Ðµ 0: ";
 	int A;
 	cin >> A;
 	if (A == 0)
@@ -207,12 +207,12 @@ void evaluation()
 		count_L--;
 		count_A--;
 		SetConsoleTextAttribute(console, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-		cout << "Êîëè÷åñòâî ñèìâîëîâ â àëôàâèòå:" << count_A << "\nÊîëè÷åñòâî ñèìâîëîâ â ïàðîëå: " << count_L << endl << endl;
+		cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð² Ð² Ð°Ð»Ñ„Ð°Ð²Ð¸Ñ‚Ðµ:" << count_A << "\nÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð² Ð² Ð¿Ð°Ñ€Ð¾Ð»Ðµ: " << count_L << endl << endl;
 		SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		if (check == 0)
 		{
 			SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_INTENSITY);
-			cout << "Ïðè çàäàííûõ ïàðàìåòðàõ íåâîçìîæíî ïîäîáðàòü âàðèàíòû ïàðîëÿ!\n\n";
+			cout << "ÐŸÑ€Ð¸ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°Ñ… Ð½ÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ð¾Ð´Ð¾Ð±Ñ€Ð°Ñ‚ÑŒ Ð²Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¿Ð°Ñ€Ð¾Ð»Ñ!\n\n";
 			SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		}
 	}
@@ -228,13 +228,13 @@ void evaluation()
 		if (check == 1)
 		{
 			SetConsoleTextAttribute(console, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-			cout << "Äëèíà ïàðîëÿ ìîæåò ñîñòàâëÿòü: " << count_L << endl << endl;
+			cout << "Ð”Ð»Ð¸Ð½Ð° Ð¿Ð°Ñ€Ð¾Ð»Ñ Ð¼Ð¾Ð¶ÐµÑ‚ ÑÐ¾ÑÑ‚Ð°Ð²Ð»ÑÑ‚ÑŒ: " << count_L << endl << endl;
 			SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		}
 		else
 		{
 			SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_INTENSITY);
-			cout << "Ïðè çàäàííûõ ïàðàìåòðàõ íåâîçìîæíî ïîäîáðàòü âàðèàíòû ïàðîëÿ!\n\n";
+			cout << "ÐŸÑ€Ð¸ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°Ñ… Ð½ÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ð¾Ð´Ð¾Ð±Ñ€Ð°Ñ‚ÑŒ Ð²Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¿Ð°Ñ€Ð¾Ð»Ñ!\n\n";
 			SetConsoleTextAttribute(console, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		}
 	}
@@ -244,17 +244,17 @@ void generator()
 	char answer;
 	system("cls");
 	int A = 36, L;
-	cout << "Äîáðî ïîæàëîâàòü â ãåíåðàòîð ïàðîëÿ!\n";
+	cout << "Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ Ð² Ð³ÐµÐ½ÐµÑ€Ð°Ñ‚Ð¾Ñ€ Ð¿Ð°Ñ€Ð¾Ð»Ñ!\n";
 	char alfabet[26] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 	char numbers[10] = { '0','1','2','3','4','5','6','7','8','9' };
 	if (S_temp != 0)
 	{
-		cout << "Ïðîãðàììà ïðåäëàãàåò äëèíó ïàðîëÿ: " << count_L;
-		cout << "\nÂû ñîãëàñíû ñ ýòèì?(Y/N): ";
+		cout << "ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð¿Ñ€ÐµÐ´Ð»Ð°Ð³Ð°ÐµÑ‚ Ð´Ð»Ð¸Ð½Ñƒ Ð¿Ð°Ñ€Ð¾Ð»Ñ: " << count_L;
+		cout << "\nÐ’Ñ‹ ÑÐ¾Ð³Ð»Ð°ÑÐ½Ñ‹ Ñ ÑÑ‚Ð¸Ð¼?(Y/N): ";
 		cin >> answer;
 		if (answer == 'N')
 		{
-			cout << "Ââåäèòå æåëàåìóþ äëèíó ïàðîëÿ: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¶ÐµÐ»Ð°ÐµÐ¼ÑƒÑŽ Ð´Ð»Ð¸Ð½Ñƒ Ð¿Ð°Ñ€Ð¾Ð»Ñ: ";
 			cin >> L;
 		}
 		else
@@ -264,7 +264,7 @@ void generator()
 	}
 	else
 	{
-		cout << "Ïðîãðàììà íå ñìîãëà îïðåäåëèòü ðàíåå ââåäåíûå ïàðàìåòðû!\nÂâåäèòå æåëàåìóþ äëèíó ïàðîëÿ: ";
+		cout << "ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð½Ðµ ÑÐ¼Ð¾Ð³Ð»Ð° Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚ÑŒ Ñ€Ð°Ð½ÐµÐµ Ð²Ð²ÐµÐ´ÐµÐ½Ñ‹Ðµ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ñ‹!\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¶ÐµÐ»Ð°ÐµÐ¼ÑƒÑŽ Ð´Ð»Ð¸Ð½Ñƒ Ð¿Ð°Ñ€Ð¾Ð»Ñ: ";
 		cin >> L;
 	}
 	int temp;
@@ -283,7 +283,7 @@ void generator()
 		}
 	}
 	SetConsoleTextAttribute(console, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-	cout << "Ïîëó÷åíûé ïàðîëü: ";
+	cout << "ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ñ‹Ð¹ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ: ";
 	for (int i = 0; i < L; i++)
 	{
 		cout << quest[i];
